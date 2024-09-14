@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><base></title>
+{% if request.user.is_authenticated%}
+    <p>Hello, {{request.user.username}} | <a href="{url 'logout'}">Logout</a> </p>
+{%else%}
+     <p> <a href="{%uri 'register'%}">Register</a> | <a href="#">Login</a> </p>
+{% endif %}
+<hr>
+
+
+</head>
+
+<body>
+    {% block content %}
+    
+    {% endbllock content %}
+</body>
+
+<footer>
+    <hr>
+    <p>BettSolutions_@_Futurebrains</p>
+</footer>
+
+
+</html>
